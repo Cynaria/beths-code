@@ -10,4 +10,11 @@ class Monster
 		person.recieve_dmg(Randomizer.get_number(@attack_strength))
 	end
 
+	def alive?
+		@health > 0 ? true : false
+	end
+
+	def recieve_dmg(damage_amt)
+		
+	end
 end
