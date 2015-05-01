@@ -2,21 +2,22 @@ require_relative "person.rb"
 
 class Item
 
-	attr_accessor :name, :value
+	attr_reader :name, :value
 
-	def initialize(name, value)
+	def initialize(name, description, value)
 		@name = name
 		@value = value
+		@description = description
 	end
 
 end
 
 class Weapon < Item 
 
-	attr_accessor :attack_pwr, :reach, :material
+	attr_reader :attack_pwr, :reach, :material
 
-	def initialize(name, type, attack_pwr, reach, material, value)
-		super(name, value)
+	def initialize(name, type, description, attack_pwr, reach, material, value)
+		super(name, description, value)
 		@attack_pwr = attack_pwr
 		@type = type
 		@reach = reach
@@ -24,3 +25,17 @@ class Weapon < Item
 	end
 
 end
+
+class Potion < Item
+
+	attr_reader :effect
+
+	def initialize(name, description, effect, potency, duration, value )
+		super(name,description,value)
+		@effect = effect
+		@potency = potency
+		@duration = duration
+	end
+
+end
+
