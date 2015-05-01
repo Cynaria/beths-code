@@ -54,8 +54,10 @@ end
 
 class Food < Item
 
-	def initialize(name, description, weight, value)
+	def initialize(name, description, weight, effect, potency, value)
 		super(name, description, weight, value)
+		@effect = effect
+		@potency = potency
 	end
 
 end
