@@ -39,8 +39,15 @@ class Potion < Item
 
 end
 
-def Armor < Item
-	
+def Armor
+
+	attr_reader 
+
+	def initialize(name, description, weight_class, value)
+		super(name, description, value)
+		@weight_class = weight_class
+
+	end
 
 end
 
