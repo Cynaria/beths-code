@@ -6,4 +6,8 @@ class Monster
 		@auto_attack = auto_attack
 	end
 
+	def attack(person)
+		person.recieve_dmg(Randomizer.get_number(@attack_strength))
+	end
+
 end

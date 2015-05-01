@@ -2,9 +2,10 @@ require_relative "weapon.rb"
 
 class Person
 	attr_reader :name, :height
-	attr_accessor :weight, :brains, :brawn, :inventory, :gold
+	attr_accessor :weight, :brains, :brawn, :inventory, :gold, :health
 	def initialize(opt = {})
 		@name = opt[:name]
+		@health = 100
 		@height = opt[:height]
 		@weight = opt[:weight]
 		@brains = opt[:brains]
@@ -21,6 +22,10 @@ class Person
 		if item.value < gold
 			@inventory[]
 		end
+	end
+
+	def recieve_dmg(damage_amt)
+		@health -= damage_amt
 	end
 
 end
