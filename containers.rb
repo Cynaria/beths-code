@@ -22,4 +22,8 @@ class Container
 		@items.find{|item| item.name == item_name}
 	end
 
+	def store_item(item)
+		@items << item
+	end
+	
 end
