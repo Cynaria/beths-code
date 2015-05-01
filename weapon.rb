@@ -51,3 +51,8 @@ class Armor < Item
 	end
 
 end
+
+class Ingredients < Item
+
+end
+
