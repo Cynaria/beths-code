@@ -12,7 +12,7 @@ class Item
 
 end
 
-class Weapon < Item 
+class Weapon < Item
 
 	attr_reader :attack_pwr, :reach, :material
 
@@ -39,14 +39,14 @@ class Potion < Item
 
 end
 
-def Armor
+class Armor < Item
 
-	attr_reader 
+	attr_reader :weight_class, :defense_rating
 
-	def initialize(name, description, weight_class, value)
+	def initialize(name, description, weight_class, defense_rating, value)
 		super(name, description, value)
 		@weight_class = weight_class
-
+		@defense_rating = defense_rating
 	end
 
 end
