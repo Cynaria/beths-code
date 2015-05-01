@@ -9,4 +9,8 @@ class Container
 		@items = items
 	end
 
+	def is_empty?
+		@items.length == 0 ? true : false
+	end
+
 end
