@@ -39,3 +39,8 @@ class Potion < Item
 
 end
 
+def Armor < Item
+	
+
+end
+
