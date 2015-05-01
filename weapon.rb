@@ -52,7 +52,11 @@ class Armor < Item
 
 end
 
-class Ingredients < Item
+class Food < Item
+
+	def initialize(name, description, weight, value)
+		super(name, description, weight, value)
+	end
 
 end
 
